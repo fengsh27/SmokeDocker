@@ -1,12 +1,12 @@
 import os
 from openai import AzureOpenAI
 
-from spagft.adapter.smoke_script import SpaGFTSmokeAdapter
+from spagft.adapter.spagft_adapter import SpaGFTSmokeAdapter
 
-endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://osubmi-openai-api-1.openai.azure.com/")
-deployment = os.getenv("OPENAI_DEPLOYMENT_NAME", "osubmi-openapi-api-deploy-1")
-subscription_key = os.getenv("OPENAI_API_KEY", "REPLACE_WITH_YOUR_KEY_VALUE_HERE")
-api_version = os.getenv("OPENAI_API_VERSION", "2023-05-15")
+endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
+deployment = os.getenv("OPENAI_DEPLOYMENT_NAME")
+subscription_key = os.getenv("OPENAI_API_KEY")
+api_version = os.getenv("OPENAI_API_VERSION")
 
 # Initialize Azure OpenAI client with key-based authentication
 client = AzureOpenAI(
